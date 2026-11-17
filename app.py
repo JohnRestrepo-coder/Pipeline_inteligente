@@ -11,11 +11,25 @@ import io
 import time
 import zipfile
 import shutil
+import importlib
 from pathlib import Path
 import pandas as pd
 import streamlit as st
 
 import config
+import procesos.modelos
+import procesos.cerebro
+import procesos.redactor
+import procesos.auditoria
+import procesos.limpiador
+
+# Forzar recarga de módulos para evitar caching de clases en memoria de Streamlit
+importlib.reload(procesos.modelos)
+importlib.reload(procesos.cerebro)
+importlib.reload(procesos.redactor)
+importlib.reload(procesos.auditoria)
+importlib.reload(procesos.limpiador)
+
 from procesos.modelos import PlanNegocio
 from procesos.cerebro import MotorIAHibrido, CONFIG_IA
 from procesos.redactor import Redactor

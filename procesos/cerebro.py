@@ -465,7 +465,9 @@ class MotorIAHibrido:
     def generar_narrativas_plan(
         self,
         plan: PlanNegocio,
-        callback_progreso: Optional[Callable[[float, str, str], None]] = None
+        callback_progreso: Optional[Callable[[float, str, str], None]] = None,
+        *args,
+        **kwargs
     ) -> PlanNegocio:
         """
         Procesa los tres bloques para un plan de negocio, transmitiendo

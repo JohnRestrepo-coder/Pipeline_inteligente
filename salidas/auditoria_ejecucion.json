@@ -11,5 +11,18 @@
     "modificado_manualmente": true,
     "secciones_generadas": 18,
     "archivo_word": "123456_Panaderia_El_Triunfo.docx"
+  },
+  {
+    "timestamp": "2026-11-17 00:00:05",
+    "documento": "1090435752",
+    "emprendedor": "NANCY YOLIMA RODRIGUEZ VACA RODRIGUEZ VACA",
+    "negocio": "Nancy Keratinas",
+    "territorio": "Cúcuta",
+    "motor_ia": "Ninguno",
+    "reintentos_ia": 9,
+    "aprobado_humano": false,
+    "modificado_manualmente": true,
+    "secciones_generadas": 18,
+    "archivo_word": "1090435752_Nancy_Keratinas.docx"
   }
 ]

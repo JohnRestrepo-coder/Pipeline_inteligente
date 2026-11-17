@@ -1,0 +1,15 @@
+[
+  {
+    "timestamp": "2026-11-16 19:54:13",
+    "documento": "123456",
+    "emprendedor": "JUAN PEREZ",
+    "negocio": "Panaderia El Triunfo",
+    "territorio": "Cali - Aguablanca",
+    "motor_ia": "No especificado",
+    "reintentos_ia": 0,
+    "aprobado_humano": false,
+    "modificado_manualmente": true,
+    "secciones_generadas": 18,
+    "archivo_word": "123456_Panaderia_El_Triunfo.docx"
+  }
+]

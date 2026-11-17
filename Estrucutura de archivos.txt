@@ -1,0 +1,36 @@
+1. modelos.py (El Contrato de Datos)
+Es el corazón técnico del proyecto. No ejecuta procesos, sino que define las reglas del juego.
+
+Función: Define la estructura dataclass del plan de negocios.
+
+Utilidad: Valida que los campos tengan el formato correcto (tipo Pydantic) y asegura que todos los demás archivos hablen el "mismo idioma" para evitar errores de datos.
+
+2. limpiador.py (Estación ETL)
+Es el encargado de procesar la materia prima (los archivos de entrada).
+
+Función: Carga archivos de Excel (.xlsx), extrae celdas específicas (como datos financieros) y los normaliza.
+
+Utilidad: Genera un archivo CSV llamado "Consolidado", que es una versión limpia y organizada de la información inicial.
+
+3. main.py (Orquestador Central)
+Es el director de orquesta que controla que todo suceda en el orden correcto.
+
+Función: Ejecuta el pipeline completo (limpiador -> cerebro -> redactor).
+
+Utilidad: Maneja los errores de todo el proceso y pide validación al usuario antes de avanzar. Es el punto de inicio del programa.
+
+4. cerebro.py (Unidad de Inteligencia AI)
+Aquí es donde ocurre el análisis "inteligente".
+
+Función: Crea prompts dinámicos usando los datos limpios y consulta a la API de Google Gemini Pro.
+
+Utilidad: Recibe las narrativas (resúmenes, análisis, recomendaciones). Tiene una restricción específica: no debe usar las palabras clave "empresa" o "negocio".
+
+5. redactor.py (Constructor del Documento)
+Es el encargado de la parte visual y final del informe.
+
+Función: Carga una plantilla de Word (.docx) y reemplaza los marcadores de posición ({{placeholders}}) con los datos y las narrativas generadas.
+
+Utilidad: Inserta fotos, genera tablas financieras y ensambla el Plan de Negocios final (Word y PDF listo para consultoría).
+
+Resumen del Flujo: Los datos entran por el limpiador, se organizan bajo los modelos, el cerebro redacta el contenido analítico y el redactor lo empaqueta todo en un documento profesional.
